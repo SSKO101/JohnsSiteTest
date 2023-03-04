@@ -1,0 +1,402 @@
+@charset "utf-8";
+/* CSS Document */
+h1 {
+  color: white;
+  text-decoration: none;
+}
+
+body{
+  background-color: #333333;
+	overflow: hidden;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	margin: 0;
+    padding: 0;
+    min-height: 100vh; 
+  
+}
+
+nav {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  display: flex;
+  justify-content: space-between; /* Use space-between to push the logo to the left and the menu items to the right */
+  align-items: center;
+  padding: 10px;
+  z-index: 1 !important ;
+}
+
+.fade-in {
+  opacity: 0;
+  animation-name: fade-in;
+  animation-duration: 1.2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.image-hover {
+  filter: grayscale(100%) !important;
+  transition: filter 0.5s !important;
+   z-index: 1;
+}
+
+.image-hover:hover {
+  filter: grayscale(0%) !important;
+}
+
+nav .logo {
+  display: flex; /* Use flex display for the logo div */
+  align-items: center; /* Align logo vertically in the center */
+}
+
+nav .logo img {
+  height: 25px; /* Remove the extra comma after 30px */
+  margin-right: 10px; /* Add margin-right to add space between the logo and the menu items */
+  margin-top: 10px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.slide {
+  width: 100%;
+  height: 400px;
+  display: none;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  cursor: pointer;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.slide.active {
+  display: block;
+}
+
+img {
+  cursor: pointer;
+}
+
+.imgabout{
+  cursor: default;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 400px;
+  display: none;
+}
+
+.slide.active {
+  display: block;
+}
+
+.slide img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  text-align: center;
+  z-index: 1;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+.main-content {
+  margin-top: 60px; /* adjust this value to match the height of your navigation bar */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-bar {
+  position: fixed;
+  bottom: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  z-index: 1;
+  color:white;
+}
+
+.text-bar p {
+  position:fixed;
+  bottom: -20%;
+  left: 50%;
+  transform: translateX(355%);
+  background-color: black;
+  display: flex;
+  justify-content: right;
+  align-items: right;
+  z-index:1;
+  color: grey;
+  }
+
+.text-bar a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.social-bar img {
+  margin: 0 10px;
+}
+
+
+.text-container {
+  text-align: center;
+  margin-top: 20px; /* adjust this value as needed */
+}
+.home {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color:white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1px;
+  z-index: -1 !important ;
+  pointer-events: none;
+}
+
+.homecontact {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color:white;
+  background-color:black;
+  padding: 1px;
+  z-index: -1 !important ;
+  
+}
+.about {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: left;
+  text-align: left;
+  color: white;
+  background-color: black;
+  padding: 1px;
+  z-index: -1 !important;
+  margin-left: 15%; /* Adjust this value to move the container to the left */
+  cursor: default;
+
+}
+.error404 {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: left;
+  text-align: center;
+  color: white;
+  background-color: black;
+  padding: 1px;
+  z-index: -1 !important;
+  margin-left: 15%; /* Adjust this value to move the container to the left */
+  cursor: default;
+  font-size: 200%;
+  
+
+}
+
+.button404 {
+  background-color: white;
+  color: black;
+  border-radius: 20px;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30px;
+}
+
+.logoabout {
+  width: 750px;
+  height: 800px;
+  float: right;
+  margin-left: -200%; /* Adjust this value to move the container to the left */
+  margin-top: 4%; 
+  z-index: -1 !important;
+  cursor: default;
+
+}
+
+.logo404 {
+  width: 750px;
+  height: 800px;
+  float: right;
+  margin-left: -200%; /* Adjust this value to move the container to the left */
+  margin-top: 10%; 
+  z-index: -1 !important;
+  cursor: default;
+
+}
+
+
+
+.about > * {
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .about {
+    width: 60%;
+    left: 20%;
+  }
+}
+
+
+
+.home img {
+  margin-bottom: 10px;
+}
+
+div form button {
+  display: block;
+  margin: 0 auto;
+}
+
+
+body {
+  background: url("path/to/image.jpg") no-repeat center center fixed;
+  background-size: cover;
+  overflow-y: scroll;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+.social-media-links {
+  display: flex;
+  justify-content: center;
+  z-index:999;
+}
+.social-media-links img {
+  height: 50px;
+  width: 50px;
+}
+
+.social-media-links a {
+  margin: 0 10px;
+}
+
+
